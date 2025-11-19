@@ -1,69 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <!-- CSS link goes inside <head> -->
     <link rel="stylesheet" href="main.css">
-    <head>
-        <h1>About Me!</h1>
-    </head>
-    <body>
-        <p class = "someotherparagraph" >
-            My name is Sidney Gil. I graduated from the University of Texas Rio Grande Valley in May of 2024. 
-            I would say I’m most proficient in Java, C++, and Python, and I have worked with tools such as Active Directory, Docker, and Angular. 
-            I’ve had hands on experience with at an internship for Walmart where I got to work with databases and create dashboards for endpoint devices so that vendors could see how their devices were being used throughout the company. 
-            I most recently got to work with Revature on a project where I am creating a Java program that is able to create and alter Pokémon card deck tables using PostgreSQL. Currently, I am looking for a job where I am able to work in a team and develop even more useful skills that I can put into real world products.
-        </p>
-        <br>
-        <p>This is my cat Chuck:</p>
-        <image src ="IMG_6564.jpg" alt="cat yawning" width = 300></image>
-        <br><br><br>
-        <h2 id="interests">My Interests</h2>
-        <ul>
-            <li>Hobbies</li>
+</head>
+
+<body>
+    <h1>About Me!</h1>
+
+    <p class="someotherparagraph">
+        My name is Sidney Gil. I graduated from the University of Texas Rio Grande Valley in May of 2024. 
+        I would say I’m most proficient in Java, C++, and Python, and I have worked with tools such as Active Directory, Docker, and Angular. 
+        I’ve had hands on experience with at an internship for Walmart where I got to work with databases and create dashboards for endpoint devices so that vendors could see how their devices were being used throughout the company. 
+        I most recently got to work with Revature on a project where I am creating a Java program that is able to create and alter Pokémon card deck tables using PostgreSQL. Currently, I am looking for a job where I am able to work in a team and develop even more useful skills that I can put into real world products.
+    </p>
+
+    <p>This is my cat Chuck:</p>
+    <!-- use <img>, not <image>, and no closing tag -->
+    <img src="IMG_6564.jpg" alt="cat yawning" width="300">
+
+    <h2 id="interests">My Interests</h2>
+    <ul>
+        <li>Hobbies
             <ul>
                 <li>Crochet</li>
                 <li>Pokemon TCG</li>
                 <li>Rivals</li>
             </ul>
-            <li>Favorite Things</li>
+        </li>
+        <li>Favorite Things
             <ul>
                 <li>Show: Community</li>
                 <li>Color: Green</li>
                 <li>Food: Pozole</li>
             </ul>
-        </ul>
+        </li>
+    </ul>
+
+    <h2>Upcoming Class</h2>
+    <table>
+        <tr>
+            <th>Class Name</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>London</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+
+    <h2>Sign Up!</h2>
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname">
         <br><br>
-        <h2>Upcoming Class</h2>
 
-        <table>
-            <tr>
-                <th>Class Name</th>
-                <th>Location</th>
-            </tr>
-            <tr>
-                <td>HTML</td>
-                <td>New York</td>
-            </tr>
-             <tr>
-                <td>CSS</td>
-                <td>London</td>
-            </tr>
-             <tr>
-                <td>JavaScript</td>
-                <td>Chicago</td>
-            </tr>
-            </table>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+        <br><br>
 
-        <h2> Sign Up!</h2>
-        <form>
-            <label for ="fname">First Name:</label>
-            <input type ="text" id = "fname" name = "fname">
-            <br><br>
-            <label for ="lname">Last Name:</label>
-            <input type ="text" id = "lname" name = "lname">
-            <br><br>
-            <label for ="email">Email:</label>
-            <input type ="email" id = "email" name = "email">
-        </form>
-
-    </body>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </form>
+</body>
 </html>
