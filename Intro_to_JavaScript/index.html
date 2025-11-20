@@ -34,5 +34,26 @@
     <button id="redBtn">Red</button>
     <script src="script.js"></script>
 
+    <div id="container"></div>
+
+
+    <ul id="listContainer">
+      <li>Old Item</li>
+    </ul>
+    <button id="newItemBtn">Add New Item</button>
+
+    <script>
+      const list = document.getElementById("listContainer");
+
+      document.getElementById("newItemBtn").addEventListener("click", () => {
+        const li = document.createElement("li");
+        li.textContent = "New Item";
+        li.style.color = "purple";
+        list.appendChild(li);
+      });
+    </script>
+
+
+
   </body>
 </html>
