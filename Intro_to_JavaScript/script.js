@@ -28,3 +28,15 @@ function div() {
 document.getElementById("addBtn").addEventListener("click", addNumbers);
 document.getElementById("multBtn").addEventListener("click", mult);
 document.getElementById("divBtn").addEventListener("click", div);
+
+
+function blue() {
+    document.getElementById("myPara").style.color = "blue"
+}
+
+
+function red(){
+    document.getElementById("myPara").style.color = "red"
+}
+document.getElementById("blueBtn").addEventListener("click", blue);
+document.getElementById("redBtn").addEventListener("click", red);
