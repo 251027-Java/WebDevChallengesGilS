@@ -1,17 +1,29 @@
-let input = document.getElementById("taskInput");
-let button = document.getElementById("addTask");
-let list = document.getElementById("taskList");
+const input = document.getElementById("taskInput");
+const button = document.getElementById("addTask");
+const list = document.getElementById("taskList");
 
-button.addEventListener("click", function() {
-  let taskText = input.value.trim();
+button.addEventListener("click", () => {
+  const taskText = input.value.trim();
   if (taskText === "") return;
 
-  let li = document.createElement("li");
-  li.textContent = taskText;
+  const li = document.createElement("li");
 
-  li.addEventListener("click", function() {
-    li.classList.toggle("done");
+  // 1) checkbox
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+
+  // 2) span for text
+  const span = document.createElement("span");
+  span.textContent = " " + taskText;
+
+  // 3) when checkbox changes, toggle done
+  checkbox.addEventListener("change", () => {
+    li.classList.toggle("done", checkbox.checked);
   });
+
+  // put checkbox + text into li
+  li.appendChild(checkbox);
+  li.appendChild(span);
 
   list.appendChild(li);
   input.value = "";
