@@ -53,6 +53,28 @@
       });
     </script>
 
+    <br><br>
+
+    <img id="myImage" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Cat" width="300"> <br>
+    <button id="toggleBtn">Change Animal!</button>
+
+    <script>
+      const img = document.getElementById("myImage");
+      const btn = document.getElementById("toggleBtn");
+
+      btn.addEventListener("click", () => {
+        if (img.src.includes("cat.jpg")) {
+          img.src = "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg";
+          img.alt = "Dog";
+          img.width = "300";
+        } else {
+          img.src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg";
+          img.alt = "Cat";
+          img.width = "300";
+        }
+      });
+    </script>
+
 
 
   </body>
