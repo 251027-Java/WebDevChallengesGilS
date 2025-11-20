@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JS Button Example</title>
+    <title>Simple Calculator</title>
   </head>
   <body>
-    <h1>Click Either Button!</h1>
+    <h1>Calculator</h1>
 
-    <button onclick="sayHello()">Say Hello</button>
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
 
-    <script>
-      function sayHello() {
-        alert("Hello from JavaScript!");
-      }
-    </script>
+    <button id="addBtn">Add</button>
+    <button id="multBtn">Multiply</button>
+    <button id="divBtn">Divide</button>
 
-    <button onclick="joke()">Tell me a joke</button>
+    <p id="result"></p>
 
-    <script>
-      function joke() {
-        alert("No");
-      }
-
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
