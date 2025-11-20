@@ -8,22 +8,29 @@ button.addEventListener("click", () => {
 
   const li = document.createElement("li");
 
-  // 1) checkbox
+  // checkbox
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
 
-  // 2) span for text
-  const span = document.createElement("span");
-  span.textContent = " " + taskText;
-
-  // 3) when checkbox changes, toggle done
   checkbox.addEventListener("change", () => {
     li.classList.toggle("done", checkbox.checked);
   });
 
-  // put checkbox + text into li
+  // task text
+  const span = document.createElement("span");
+  span.textContent = " " + taskText + " ";
+
+  // remove button
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "Remove";
+
+  removeBtn.addEventListener("click", () => {
+    li.remove(); // deletes this task
+  });
+
   li.appendChild(checkbox);
   li.appendChild(span);
+  li.appendChild(removeBtn);
 
   list.appendChild(li);
   input.value = "";
