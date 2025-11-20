@@ -75,6 +75,20 @@
       });
     </script>
 
+    <br><br><br>
+
+    <button id="colorBtn">Change Background</button>
+
+    <script>
+      const colors = ["lightblue", "lightgreen", "lavender", "peachpuff", "lightyellow"];
+      let i = 0;
+
+      document.getElementById("colorBtn").addEventListener("click", () => {
+        document.body.style.backgroundColor = colors[i];
+        i = (i + 1) % colors.length;
+      });
+    </script>
+
 
 
   </body>
